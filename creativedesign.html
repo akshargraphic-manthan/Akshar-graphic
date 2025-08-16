@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AksharGraphic — Creative Design</title>
+  <link rel="stylesheet" href="creativedesign.css" />
+</head>
+<style>
+  /* RESET + GLOBALS */
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(40, 40, 40);
+  font-family: Arial, Helvetica, sans-serif;
+  color: aliceblue;
+   position: relative;
+}
+ /* fixed width */
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 28px;
+  background: #242424;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: orange;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+}
+
+/* SAME COLOR for normal + visited */
+.menu a,
+.menu a:visited {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.menu a:hover {
+  background: orange;
+  color: #111;
+  border-color: orange;
+}
+
+/* HERO / TAGLINE */
+.tagline {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 50px;
+}
+
+.details {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.button {
+  padding: 15px 30px;
+  font-size: 17px;
+  background: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: black;
+  transition: background 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: rgb(232, 159, 51);
+  color: white;
+}
+
+/* IMAGE HOVER ZOOM */
+.zoom {
+  width: 300px;
+  transition: transform 0.5s ease;
+  max-width: 100%;
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+}
+
+/* ABOUT SECTION */
+.about-section {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(243, 168, 54);
+  color: white;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 20px;
+  flex-wrap: wrap;
+}
+
+.about-section .image img {
+  width: 400px;
+  height: auto;
+  max-width: 100%;
+}
+
+.section {
+  max-width: 600px;
+  font-size: 20px;
+  padding: 20px;
+}
+
+/* PRODUCTS */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 80px 50px;
+}
+
+.product {
+  background-color: transparent;
+  max-width: 250px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product h1 {
+  margin: 20px 0 10px;
+}
+
+.product p {
+  margin-bottom: 20px;
+}
+
+.mybutton {
+  background-color: white;
+  font-size: 20px;
+  width: 150px;
+  height: 36px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.mybutton:hover {
+  background-color: rgb(231, 157, 46);
+  color: aliceblue;
+}
+
+/* SERVICES */
+.services {
+  text-align: center;
+  font-family: cursive;
+  font-size: 30px;
+  padding: 20px;
+  color: aliceblue;
+}
+
+.clientservices img {
+  width: 15%;
+  padding: 50px 30px;
+}
+
+.clientwork {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  opacity: 0.9;
+  padding: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  flex-wrap: wrap;
+}
+
+.clientlogo {
+  font-family: monospace;
+  padding: 50px 26px;
+  width: 20%;
+}
+
+/* FORM FIELDS */
+.fullname,
+.Email,
+.Number,
+.Address,
+.Product {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.YourMassage {
+  width: 100%;
+  padding: 20px;
+  height: 210px;
+  font-size: 18px;
+}
+
+.button01 {
+  background-color: white;
+  font-size: 22px;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.button01:hover {
+  background-color: rgb(52, 49, 82);
+  color: white;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  position: relative;
+  background-color: rgb(24, 24, 24);
+  padding: 60px 250px;
+  gap: 200px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logo02 {
+  display: flex;
+  padding-left: 30px;
+  color: white;
+  font-size: 17px;
+  text-align: center;
+}
+
+.address {
+  padding: 15px;
+  font-size: 10px;
+  color: white;
+}
+
+.copy-write {
+  font-size: 17px;
+  text-align: center;
+  background-color: rgb(34, 34, 34);
+  padding: 10px;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 1200px) {
+  .footer {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .tagline {
+    font-size: 40px;
+  }
+  
+  .details {
+    font-size: 20px;
+  }
+  
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .clientlogo {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 16px;
+  }
+  
+  .logo {
+    margin-bottom: 15px;
+  }
+  
+  .menu {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .tagline {
+    font-size: 32px;
+    margin: 30px 0;
+  }
+  
+  .details {
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  .about-section .image img {
+    width: 300px;
+  }
+  
+  .section {
+    font-size: 18px;
+  }
+  
+  .products {
+    padding: 40px 20px;
+    gap: 30px;
+  }
+  
+  .clientlogo {
+    width: 40%;
+    padding: 30px 15px;
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: cl;
+    text-align: center;
+    gap: 270px;
+    padding: 40px 20px;
+  }
+  
+  .Services, .Services02 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tagline {
+    font-size: 28px;
+  }
+  
+  .details {
+    font-size: 16px;
+  }
+  
+  .button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+  
+  .about-section {
+    padding: 40px 10px;
+  }
+  
+  .about-section .image img {
+    width: 250px;
+  }
+  
+  .product {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  .clientlogo {
+    width: 80%;
+  }
+  
+  .copy-write {
+    font-size: 14px;
+  }
+}
+</style>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <a class="logo" href="#home-section">AksharGraphic</a>
+    <nav class="menu">
+      <a href="#home-section">Home</a>
+      <a href="#about-section">About</a>
+      <a href="#services-section">Services</a>
+      <!-- અહીં mailto નાખ્યું -->
+     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aksha2000graphic@gmail.com&su=Inquiry%20from%20Website&body=Hello%20AksharGraphic%2C%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
+  Send Email
+</a>
+
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home-section" class="herosection">
+    <div class="tagline">
+      <h3 style="background-color: rgb(235, 162, 54);" class="fade-in">“Where Creativity Meets Purpose.”</h3>
+    </div>
+    <div class="details">
+      <p>It's a style that emphasizes interpretation and experimentation, breaking free from realism to explore unique, modern, and thought-provoking visuals.
+</p>
+    </div>
+    <div class="cta">
+      <a href="#about-section" class="button">Read More</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about-section">
+    <div class="image">
+      <!--<img src="./2150709932.jpg" alt="sample" class="zoom">-->
+      <!--<img src="./2150709932.jpg" alt="sample">-->
+      <img src="./2150709932.jpg" alt="sample">
+
+
+    </div>
+    <div class="section">
+      <h1>About</h1><br>
+      <p>Graphic design is the art and practice of planning and projecting ideas and experiences with visual and textual content. It is used to communicate messages through images, colors, typography, layout, and illustrations</p>
+    </div>
+  </section>
+
+  <!-- SERVICES (Products list) -->
+  <section class="products" id="services-section">
+    <div class="product">
+      <img src="./attachment_63310421.jpeg" alt="sample" class="zoom">
+      <h1>Packaging Design</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti recusandae, impedit nisi qui iure quo soluta voluptatum officiis velit sapiente delectus, voluptates atque sed adipisci dolores blanditiis, esse non optio.</p>
+      <button class="mybutton">Order Now</button>
+    </div>
+    <div class="product">
+      <img src="./steesh negi photography-01.jpg" alt="sample" class="zoom">
+      <h1>Logo Design</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti recusandae, impedit nisi qui iure quo soluta voluptatum officiis velit sapiente delectus, voluptates atque sed adipisci dolores blanditiis, esse non optio.</p>
+      <button class="mybutton">Order Now</button>
+    </div>
+    <div class="product">
+      <img src="./Black Wolf social media.jpg" alt="sample" class="zoom">
+      <h1>Poster Design</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti recusandae, impedit nisi qui iure quo soluta voluptatum officiis velit sapiente delectus, voluptates atque sed adipisci dolores blanditiis, esse non optio.</p>
+      <button class="mybutton">Order Now</button>
+    </div>
+    <div class="product">
+      <img src="./Vertical-business-rollup-banner-template-999x999.jpg" alt="sample" class="zoom">
+      <h1>Banner Design</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti recusandae, impedit officiis velit sapiente delectus, voluptates atque sed adipisci dolores blanditiis, esse non optio. dolores blanditiis, esse non</p>
+      <button class="mybutton">Order Now</button>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="client work">
+    <div class="clientwork">
+      <h1>Professional Logo Brand</h1>
+    </div>
+  </section>
+
+  <section class="logo">
+    <div class="clientlogo">
+      <img src="./kusal raj dairy farm.png" alt="sample" class="zoom">
+    </div>
+    <div class="clientlogo">
+      <img src="./DEVAM AASHISH METAL INDUSTRIES LOGO.png" alt="sample" class="zoom">
+    </div>
+    <div class="clientlogo">
+      <img src="./sp photography png.png" alt="sample" class="zoom">
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="footer" id="contact-section">
+    <div class="logo02">
+      <h2>Akshar Graphic</h2>
+    </div>
+    <div class="About">
+      <h2>Address</h2><br>
+      <p>10, Kirannagar Shapur <br>Darwaja Bhar Ahmedabad 380004</p>
+    <a href="https://www.instagram.com/akshar_graphic_design/?igsh=MTc0YTFxZnBoDXoXZQ==" target="_blank">
+    <img style="width:30px;"src="pngwing.com (78).png" alt="" class="zoom">
+    </a>
+    </div>
+    <div class="Services">
+      <h2>Services</h2><br>
+      <p>Brand Design </p><br>
+      <p>Poster Design </p><br>
+      <p>Banner Design</p><br>
+      <p>Business Card</p><br>
+      <p>Social Media Post </p><br>
+    </div>
+    <div class="Services02">
+      <h2>Recent Posts </h2><br>
+      <p>A Creative Branded </p><br>
+      <p>All Of Lights </p><br>
+      <p>Atract Design</p><br>
+      <p>A powerfull Design</p><br>
+    </div>
+  </section>
+
+  <section>
+    <div class="copy-write content">
+      <p>Copyright © 2025 NanoSoft. Designed and Developed by LineThemes Only on Envato Market.</p>
+    </div>
+  </section>
+</body>
+</html>
